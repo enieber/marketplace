@@ -1,21 +1,39 @@
 import React, { Component } from 'react';
-import ProductItem from './ProductItem';
+import Product from './Product';
 
 class ListProduct extends Component {
-  
+   constructor(props) {
+    super(props);
+    this.state = {
+      listProduct: [],
+    };
+  }
+
+  componentWillMount() {
+    this.getProducts();
+  }
+
+  getProducts() {
+    fetch('http://enieber.com.br/product.json')
+    .then(result => result.json())
+    .then(json => {
+      this.setState({
+        listProduct: json
+      });
+    })
+    .catch(err => console.warn(err))
+
+  }
+
   render() {
     return (
       <div>
-        <ul>
-          <li>
-            <ProductItem
-              img={this.props.img}
-              name={this.props.name}
-              value={this.props.value}
-              description={this.props.description}
-            />
-          </li>
-        </ul>
+        { this.state.listProduct.map(product => (
+        <Product
+          key={product.id}
+          {...product} 
+          />)
+        )}        
       </div>
     )
   }
