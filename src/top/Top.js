@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class Top extends component {
+class Top extends Component {
   constructor(props) {
     super(props)
 
@@ -12,5 +12,5 @@ class Top extends component {
           <p> Marketplace </p>
         </div>
     );
-  }c
+  }
 }
