@@ -14,9 +14,10 @@ class App extends Component {
   render() {
     return (
       <div>
+        <Top/>
         <ListProduct
           data={this.state.listProduct}
-        />       
+        />
       </div>
     );
   }
