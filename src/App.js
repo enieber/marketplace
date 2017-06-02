@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
+
 import ListProduct from './product/ListProduct';
+import Top from './top/Top';
 
 class App extends Component {
   constructor(props) {
@@ -12,9 +14,10 @@ class App extends Component {
   render() {
     return (
       <div>
+        <Top/>
         <ListProduct
           data={this.state.listProduct}
-        />
+        />       
       </div>
     );
   }
