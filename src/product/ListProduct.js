@@ -27,7 +27,10 @@ class ListProduct extends Component {
 
   render() {
     return (
-      <div>
+      <div
+        style={{
+          flexGrow:  3,
+        }}>
         { this.state.listProduct.map(product => (
         <Product
           key={product.id}
