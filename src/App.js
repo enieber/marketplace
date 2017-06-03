@@ -13,7 +13,14 @@ class App extends Component {
 
   render() {
     return (
-      <div> 
+      <div
+        style={{
+          display: 'flex',
+          flex: 1,
+          flexDirection: 'column',
+          backgroundColor: '#fbe1e0',
+        }}
+        >
         <div>
           <Top />
         </div>

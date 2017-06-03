@@ -6,40 +6,63 @@ class Product extends PureComponent {
     return (
       <div
         style={{
-          display: 'inline',
-          border: '1px solid #ddd',
-          margin: 10,
+          display: 'flex',
+          flex: 1,
+          margin: 15,
+          backgroundColor: '#fbe1e0',  
           textAlign: 'center',
           flexDirection: 'column',
        }}>
+        <div
+          style={{            
+           justifyContent: 'center',
+          }}
+        >
         <img
           src={this.props.image}
           style={{
            width: '80%',
           }}
         />
+        </div>
         <h2
           style={{
             alingText: 'center',
+            color: '#463239',
           }}>
           { this.props.name } 
         </h2>
-        <p>
+        <p
+          style={{
+            color: '#463239',
+          }}>
           { this.props.description }
         </p>
-        <p>
+        <p
+          style={{
+            color: '#463239',
+          }}>
         {
           `R$ ${this.props.price}` 
         }
         </p>        
+        <div
+          style={{            
+           justifyContent: 'center',
+          }}
+        >
+ 
         <button
           style={{
-            border: '1px solid orange',
-            backgroundColor: 'orange',
+            width: '80%',
+            height: '2.5em',
+            border: 'none',
+            backgroundColor: '#ed6b86',
             color: 'white',
           }}>
-          Add in Card
+          Buy
         </button>
+        </div>
       </div>
     );
   }

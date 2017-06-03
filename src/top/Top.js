@@ -7,15 +7,27 @@ class Top extends PureComponent {
         style={{
           display: 'flex',
           flex: 1,
-          background: 'red',
+          height: 80,
+          background: '#FFAAAA',
           marginBottom: 10,
         }}>
-
-        <p
-         style={{
-           flex: 2,
-          textAlign: 'center', 
-         }} > {`Marketplace `} {this.props.title || 'title'} </p>
+        <div>
+          
+        </div>
+        <div
+          style={{
+            flex:2,            
+          }}
+        >
+          <p
+           style={{
+             textAlign: 'center',
+             color: '#463239',
+             fontSize: '1.5em',
+           }} > {`Marketplace `} {this.props.title || 'title'} </p>
+        </div>
+        <div>
+        </div>
       </div>
     );
   }
