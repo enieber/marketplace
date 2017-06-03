@@ -1,30 +1,31 @@
-import React, { Component } from 'react';
+  import React, { Component } from 'react';
 
-import ListProduct from './product/ListProduct';
-import Top from './top/Top';
+  import ListProduct from './product/ListProduct';
+  import Top from './top/Top';
 
-class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      listProduct: [],
+  class App extends Component {
+    constructor(props) {
+      super(props);
+      this.state = {
+        listProduct: [],
+      }
     }
-  }
 
-  render() {
-    return (
-      <div
-        style={{
-          display: 'flex',
-          flex: 1,
-          flexDirection: 'column',
-          backgroundColor: '#fbe1e0',
-        }}
+    render() {
+      return (
+        <div
+          style={{
+          }}
         >
-        <div>
-          <Top />
-        </div>
-        <div>
+        <Top />
+        <div
+          style={{
+            display: 'flex',
+            flexDirection: 'column',
+            width: '100%',
+            backgroundColor: '#fbe1e0',
+          }}>
+
           <ListProduct
             data={this.state.listProduct}
           />

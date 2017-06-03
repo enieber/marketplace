@@ -1,23 +1,34 @@
 import React, { PureComponent } from 'react';
+import FaBars from 'react-icons/lib/fa/bars';
+import FaShoppingCart from 'react-icons/lib/fa/shopping-cart';
 
 class Top extends PureComponent {
   render() {
+    let styles = {
+      container: {
+        display: 'flex',
+        height: 80,
+        width: '100%',
+        background: '#FFAAAA',
+        flexDirection: 'row',
+        justifyContent:'space-around',
+      },
+      icons: {
+        alignSelf: 'center',
+      },
+      title: {
+        alignSelf: 'center',
+      }
+    }
     return (
       <div
-        style={{
-          display: 'flex',
-          flex: 1,
-          height: 80,
-          background: '#FFAAAA',
-          marginBottom: 10,
-        }}>
-        <div>
-          
+        style={styles.container}>
+        <div
+          style={styles.icons}>
+          <FaBars size="30" color="#463239"/> 
         </div>
         <div
-          style={{
-            flex:2,            
-          }}
+          style={styles.title}
         >
           <p
            style={{
@@ -26,7 +37,10 @@ class Top extends PureComponent {
              fontSize: '1.5em',
            }} > {`Marketplace `} {this.props.title || 'title'} </p>
         </div>
-        <div>
+        <div
+          style={styles.icons} 
+         >      
+         <FaShoppingCart size="40" color="#463239"/>
         </div>
       </div>
     );
