@@ -1,9 +1,7 @@
-import React, { PureComponent } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 
-class Product extends PureComponent {
-
-  render() {
-    return (
+const Product = ({ addCart, image, price, name, description }) => (
       <div
         style={{
           display: 'flex',
@@ -19,7 +17,7 @@ class Product extends PureComponent {
           }}
         >
         <img
-          src={this.props.image}
+          src={image}
           style={{
            width: '80%',
           }}
@@ -30,21 +28,21 @@ class Product extends PureComponent {
             alingText: 'center',
             color: '#463239',
           }}>
-          { this.props.name } 
+          { name } 
         </h2>
         <p
           style={{
             color: '#463239',
           }}>
-          { this.props.description }
+          { description }
         </p>
         <p
           style={{
             color: '#463239',
-          }}>
-        {
-          `R$ ${this.props.price}` 
-        }
+            }}>
+            {
+              `R$ ${ price }` 
+          }
         </p>        
         <div
           style={{            
@@ -53,6 +51,7 @@ class Product extends PureComponent {
         >
  
         <button
+          onClick={() => addCart()}
           style={{
             width: '80%',
             height: '2.5em',
@@ -64,9 +63,15 @@ class Product extends PureComponent {
         </button>
         </div>
       </div>
-    );
-  }
+);  
+
+Product.propTypes = {
+  addCart: PropTypes.func.isRequired,
+  price: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
 }
+
 
 export default Product;
 

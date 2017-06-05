@@ -25,6 +25,10 @@ class ListProduct extends Component {
 
   }
 
+  addCart(product) {
+    console.log(product.id);
+  }
+  
   render() {
     return (
       <div
@@ -35,6 +39,7 @@ class ListProduct extends Component {
         <Product
           key={product.id}
           {...product} 
+          addCart={() => this.addCart(product)}
           />)
         )}        
       </div>
