@@ -26,10 +26,8 @@
             width: '100%',
             backgroundColor: '#fbe1e0',
           }}>
-	  <div>
-	      <Button>Normal Button</Button>
-	      <Button primary>Primary Button</Button>
-	  </div>
+        <Button>Normal Button</Button>
+        <Button primary>Primary Button</Button>
 
           <ListProduct
             data={this.state.listProduct}

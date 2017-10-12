@@ -7,7 +7,8 @@
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
     "react-icons": "^2.2.5",
-    "styled-components": "^2.2.1"
+    "styled-components": "^2.2.1",
+    "styled-media-query": "^2.0.1"
   },
   "devDependencies": {
     "babel-jest": "^20.0.3",
