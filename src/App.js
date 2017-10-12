@@ -1,5 +1,6 @@
   import React, { Component } from 'react';
 
+  import Button from './button';
   import ListProduct from './product/ListProduct';
   import Top from './top/Top';
 
@@ -25,6 +26,10 @@
             width: '100%',
             backgroundColor: '#fbe1e0',
           }}>
+	  <div>
+	      <Button>Normal Button</Button>
+	      <Button primary>Primary Button</Button>
+	  </div>
 
           <ListProduct
             data={this.state.listProduct}
